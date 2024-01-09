@@ -4,7 +4,7 @@
 
 # Test Flask
 
-Invoke a Python script via the Python flask web server running as a GitHub
+Invoke a Python script via the [Python flask](https://flask.palletsprojects.com) web server running as a GitHub
 action.
 
 You cannot run a production web server like this: but this technique does show

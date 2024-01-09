@@ -1,4 +1,4 @@
-# Test 2024-01-09 at 03:38:00
+# Test 2024-01-09 at 03:39:42
 
 name: Test
 
@@ -23,6 +23,7 @@ jobs:
       run: |
         timeout 1m flask run & (
           sleep 2;
-          curl -s http://127.0.0.1:5000;
-          curl -s http://127.0.0.1:5000/goodBye
+          curl -s http://127.0.0.1:5000/hello   &&
+          curl -s http://127.0.0.1:5000/goodbye &&
+          echo "All tests succeeded"
         )

@@ -5,3 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>\n"
+
+@app.route("/goodBye")
+def hello_world():
+    return "<p>Goodbye, World!</p>\n"

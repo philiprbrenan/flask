@@ -1,0 +1,27 @@
+# Test 2024-01-09 at 02:39:23
+
+name: Test
+
+on:
+  push
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: 'main'
+
+    - name: Install Flask
+      run: |
+        sudo pip3 install flask
+
+    - name: Run Flask
+      run: |
+        sudo pip3 install flask
+        timeout 1m flask run
+        wget http://127.0.0.1:5000
+        cat index.html
